@@ -84,21 +84,24 @@ class ViewController: UIViewController {
     {
         playSound()
         if (currentOperation != Operations.Empty){
-            rightVarStr = runningNumber
-            runningNumber = ""
-            
-            if (currentOperation == Operations.Multiply){
-                results = "\(Double(leftValStr)! * Double(rightVarStr)!)"
-            } else if (currentOperation == Operations.Divide){
-                results = "\(Double(leftValStr)! / Double(rightVarStr)!)"
-            } else if (currentOperation == Operations.Addition){
-                results = "\(Double(leftValStr)! + Double(rightVarStr)!)"
-            } else if (currentOperation == Operations.Subtract){
-                results = "\(Double(leftValStr)! - Double(rightVarStr)!)"
+            if runningNumber != "" {
+                rightVarStr = runningNumber
+                runningNumber = ""
+                
+                if (currentOperation == Operations.Multiply){
+                    results = "\(Double(leftValStr)! * Double(rightVarStr)!)"
+                } else if (currentOperation == Operations.Divide){
+                    results = "\(Double(leftValStr)! / Double(rightVarStr)!)"
+                } else if (currentOperation == Operations.Addition){
+                    results = "\(Double(leftValStr)! + Double(rightVarStr)!)"
+                } else if (currentOperation == Operations.Subtract){
+                    results = "\(Double(leftValStr)! - Double(rightVarStr)!)"
+                }
+                
+                leftValStr = results
+                outputLabel.text = results
             }
             
-            leftValStr = results
-            outputLabel.text = results
             currentOperation = op
         }
         else{
