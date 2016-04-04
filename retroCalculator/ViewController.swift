@@ -14,6 +14,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var outputLabel:UILabel!
     
     var buttonSound : AVAudioPlayer!
+    var runningNumber = ""
+    var leftValStr = ""
+    var rightVarStr = ""
+    
     
     override func viewDidLoad()
     {
@@ -35,6 +39,27 @@ class ViewController: UIViewController {
     @IBAction func numberPressed (btn: UIButton!)
     {
         buttonSound.play()
+    }
+    
+    @IBAction func onDividePressed (sender: AnyObject)
+    {
+    
+    }
+    
+    @IBAction func onMultiplyPressed (sender:AnyObject)
+    {
+    }
+    
+    @IBAction func onSubtractPressed (sender : AnyObject)
+    {
+    }
+    
+    @IBAction func onAddPressed (sender : AnyObject)
+    {
+    }
+    
+    @IBAction func onEqualsPressed (sender:AnyObject)
+    {
     }
 
 }
