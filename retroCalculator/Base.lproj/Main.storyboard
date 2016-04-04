@@ -280,6 +280,9 @@
                             <constraint firstItem="tb1-pk-PIW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qsN-Hq-2wy"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="outputLabel" destination="jvR-tv-lZ1" id="lNO-va-esk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
